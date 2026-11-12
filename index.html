@@ -13,6 +13,54 @@
 @media(max-width:520px){.grid{grid-template-columns:1fr}.hero-art{flex-wrap:wrap}.compare{font-size:.82rem}.compare th,.compare td{padding:9px 8px}.slide-footer{align-items:flex-start;flex-direction:column}.slide-controls{width:100%;justify-content:space-between}.control{padding:9px 13px}.top-actions .hide-mobile{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.topbar,.progress-track,.sidebar,.slide-footer,.speaker,.quiz-controls{display:none!important}.layout{display:block;padding:0}.slide{display:block!important;min-height:0;page-break-after:always;margin:0 0 18px}.slide-inner{box-shadow:none;border:1px solid #bbb;padding:25px}.slide-inner:before,.hero:after{display:none}.presentation{width:100%}body{background:white}}
+
+/* CANVA-INSPIRED PRESENTATION MODE */
+body{background:linear-gradient(135deg,#dceeff 0%,#edf2ff 48%,#e5f6ff 100%);background-attachment:fixed}
+.topbar{background:#f9fbffdd;border-bottom:1px solid #d9e4f5;padding:10px clamp(14px,3vw,38px)}
+.brand-icon{background:linear-gradient(135deg,#b9dcff,#d9caff);border-radius:12px}
+.layout{display:block;max-width:1500px;padding:88px clamp(12px,3vw,42px) 28px}
+.sidebar{display:none}
+.presentation{width:100%;max-width:1180px;margin:0 auto}
+.slide{min-height:0;display:none}
+.slide.active{display:flex;flex-direction:column;animation:canvaIn .42s cubic-bezier(.2,.75,.25,1) both}
+.slide-inner{width:100%;aspect-ratio:16/9;min-height:570px;max-height:calc(100vh - 150px);overflow:auto;border:0;border-radius:24px;padding:clamp(28px,4.2vw,64px);box-shadow:0 24px 70px #526b9a25;background:linear-gradient(145deg,#fff 0%,#f8fbff 70%,#f1f7ff 100%)}
+.slide-inner:before{width:360px;height:360px;top:-220px;right:-120px;background:radial-gradient(circle,#dceaff99 0%,#e9e1ff55 55%,transparent 70%)}
+.slide-inner h2{font-size:clamp(2rem,4vw,3.25rem);max-width:850px}
+.slide-inner .eyebrow{letter-spacing:.18em;color:#6486c5}
+.hero{background:linear-gradient(125deg,#fdfdff 0%,#e8f3ff 53%,#e8eaff 100%)}
+.hero h1{font-size:clamp(2.8rem,6vw,5.5rem);max-width:900px}
+.hero:after{border-color:#ffffff88;width:300px;height:300px}
+.card{border:0;border-radius:22px;background:#f1f6ff;padding:clamp(16px,2vw,25px);box-shadow:0 8px 24px #5274a00b}
+.card.blue{background:linear-gradient(145deg,#e5f3ff,#edf0ff)}
+.card.mint{background:linear-gradient(145deg,#e8f8f1,#effbf9)}
+.card.gold{background:linear-gradient(145deg,#fff5df,#fff9ee)}
+.formula{border:0;border-radius:18px;background:linear-gradient(120deg,#e8f3ff,#f0edff);padding:18px}
+.keyline{background:#edf5ff;border-left-color:#8b9de2}
+.compare{border:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 22px #5274a00b}
+.compare th{background:#e6edff}.compare td{background:#fbfcff}
+.graphbox{border:0;background:#f3f7ff;border-radius:18px}
+.slide-footer{max-width:1180px;margin:15px auto 0;padding:0 4px;color:#647b9b}
+.control{border:0;background:#fff;border-radius:12px;box-shadow:0 5px 16px #4b679016;padding:11px 18px}
+.control.next,.pill-btn.primary{background:linear-gradient(110deg,#477fd0,#786bc9);border:0;color:#fff}
+.pill-btn{background:#fff;border-color:#e1e8f5}
+.speaker{border-color:#dce5f5}
+.end-note{background:linear-gradient(120deg,#eaf4ff,#f1efff);border:0;border-radius:20px}
+.footer-credit{padding-top:22px}
+@keyframes canvaIn{from{opacity:0;transform:translateY(14px) scale(.992)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:850px){
+ .layout{padding:78px 10px 20px}
+ .slide-inner{aspect-ratio:auto;min-height:calc(100vh - 160px);max-height:none;padding:25px 20px;border-radius:20px}
+ .slide-footer{padding:0 5px}
+}
+@media(max-width:520px){
+ .slide-inner{padding:22px 17px;min-height:calc(100vh - 150px)}
+ .hero h1{font-size:clamp(2.5rem,13vw,4rem)}
+ .topbar .brand{font-size:.82rem}
+}
+@media print{
+ .layout{padding:0}.slide-inner{aspect-ratio:auto;max-height:none;min-height:0;overflow:visible;box-shadow:none;border:1px solid #ddd}
+}
+
 </style>
 </head>
 <body>
